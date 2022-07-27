@@ -1,0 +1,24 @@
+.banner {
+  background-color: $tertiary;
+  background-size: cover;
+  width: 100%;
+  height: 1.3rem;
+  text-align: center;
+  color: $secondary3;
+
+  &__content {
+    //display: inline-block; /* Important to give the content a width */
+  
+    width: 100px;
+    overflow: hidden;
+    // transform: translateX(100%); /* Animation start out of the screen */
+  
+    // /* Add the animation */
+    // animation: move 30s linear infinite /* infinite make reapeat the animation indefinitely */;
+  }
+}
+
+  /* Create the animation */
+  @keyframes move {
+    to { transform: translateX(-100%); }
+  }

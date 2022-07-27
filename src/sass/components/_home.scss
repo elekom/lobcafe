@@ -1,0 +1,148 @@
+.home {
+  background-color: $secondary;
+  //background-image: linear-gradient($secondary 50%, $secondary2);
+  background-size: cover;
+  height: 100vh;
+  color: $primary;
+
+  @include respond(tab-port) {
+    height: auto;
+    position: relative;
+    padding: 1rem;
+  }
+
+  &__picture {
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    opacity: 0.50;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    @include respond(tab-port) {
+      padding: 0;
+      top: 0;
+    }
+  }
+
+  &__card {
+    position: absolute;
+    top: 20%;
+    left: 65%;
+    border: 2px solid $primary;
+    height: 52%;
+    width: 28%;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    @include respond(tab-port) {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 90%;
+      //height: 100%;
+    }
+  }
+
+  &__divider {
+    width: 100%;
+    height: .7rem;
+    background-color: transparent;
+    border-radius: 100px;
+    border: 2px solid $primary;
+    margin: 0.5rem 0;
+  }
+
+  &__title {
+    font-size: 4rem;
+    text-transform: uppercase;
+  }
+
+  &__details {
+    li {
+      list-style: none;
+    }
+  }
+
+  &__button {
+    border: 2px solid $secondary3;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: $secondary3;
+    padding: 1rem;
+    background-color: transparent;
+
+    position: absolute;
+    top: 80%;
+    left: 67%;
+    height: 7%;
+    width: 23%;
+
+    @include respond(tab-port) {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 90%;
+      margin: 1rem 0;
+    }
+  }
+}
+
+// @media (max-width: 767px) {
+//   .home {
+//     background-color: $secondary;
+//     //background-image: linear-gradient($secondary 50%, $secondary2);
+//     background-size: cover;
+//     height: 100vh;
+//     color: $primary;
+  
+//     &__card {
+//       position: absolute;
+//       top: 20%;
+//       left: 65%;
+//       border: 2px solid $primary;
+//       height: 52%;
+//       width: 100%;
+//       padding: 1rem;
+//       border-radius: 1rem;
+//     }
+  
+//     &__divider {
+//       width: 100%;
+//       height: .7rem;
+//       background-color: transparent;
+//       border-radius: 100px;
+//       border: 2px solid $primary;
+//       margin: 0.5rem 0;
+//     }
+  
+//     &__title {
+//       font-size: 4rem;
+//       text-transform: uppercase;
+//     }
+  
+//     &__details {
+//       li {
+//         list-style: none;
+//       }
+//     }
+  
+//     &__button {
+//       border: 2px solid $secondary3;
+//       border-radius: 1rem;
+//       text-transform: uppercase;
+//       font-size: 2rem;
+//       color: $secondary3;
+//       padding: 1rem;
+//       background-color: transparent;
+  
+//       position: absolute;
+//       top: 80%;
+//       left: 67%;
+//       height: 7%;
+//       width: 23%;
+//     }
+//   }
+// }

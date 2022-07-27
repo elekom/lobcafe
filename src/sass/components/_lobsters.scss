@@ -1,0 +1,125 @@
+.lobsters {
+  background-color: $secondary3;
+  //background-image: linear-gradient($secondary3 50%, $secondary4);
+  background-size: cover;
+  height: 100vh;
+  text-align: left;
+
+  @include respond(tab-port) {
+    height: auto;
+    position: relative;
+  }
+
+  &__title {
+    color: $secondary2;
+    text-transform: uppercase;
+    font-size: 3rem;
+    padding: 1rem 2rem;
+  }
+
+  &__subtitle {
+    color: $secondary2;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 95%;
+    text-align: center;
+    border: 2px solid $secondary3;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+
+    @include respond(tab-port) {
+      background-color: $white;
+    }
+  }
+
+  &__row {
+    padding: 0 4rem;
+  }
+
+  &__card {
+    text-align: center;
+    height:70vh;
+    position: relative;
+
+    &__side {
+      height:70vh;
+      width: 100%;
+      transition: all .8s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+  
+      &--back {
+        background-color: $white;
+        transform: rotateY(180deg);
+        height: inherit;
+        color: $secondary3;
+        border-radius: 5px;
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(-180deg);
+    }
+  
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
+
+    &__picture {
+      max-width:100%;
+      height: inherit;
+      overflow: hidden;
+      border-radius: 5px;
+
+      @include respond(phone) {
+        max-height: 20rem;
+      }
+    }
+
+    @include respond(tab-port) {
+
+      //height: auto;
+      text-align: center;
+      position: relative;
+        
+      &__side {
+        height: auto;
+        position: relative;
+        box-shadow: none;
+
+        &--back {
+          transform: rotateY(0) translate(0, 6rem);
+          color: white;
+        }
+      }
+
+      &:hover &__side--front {
+        transform: rotateY(0);
+      }
+
+      &:hover &__side--back {
+        transform: rotateY(0) translate(0, 6rem);
+      }
+
+      &__details {
+        padding: 1rem 3rem;
+      }
+    }
+  }
+
+}
