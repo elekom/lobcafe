@@ -1,0 +1,98 @@
+.modal {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($black, .8);
+  z-index: 9999;
+  transition: all .3s;
+
+  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background-color: rgba($black, .3);
+  }
+
+  &__content {
+    width: 65%;
+    height: 75%;
+    @include absCenter;
+    display: table;
+
+    @include respond(phone) {
+      width: 100%;
+      height: 100vh;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  &__image {
+    width: inherit;
+    @include verticalCenter;
+  }
+
+  &__left {
+    width: 50%;
+    background-color: $primary;
+    display: table-cell;
+    border-radius: 3px;
+  }
+
+  &__right {
+    width: 50%;
+    display: table-cell;
+    background-color: rgba($white, 0.7);
+    box-shadow: 0 2rem 4rem rgba($black, .2);
+    border-radius: 3px;
+
+    // TEXT
+    font-size: 1.3rem;
+    color: $secondary4;
+    
+    padding: 2rem;
+
+    // @include respond(phone) {
+    //   width: 100%;
+    //   height: 100vh;
+    //   display: inline-block;
+    // }
+  }
+
+  &__close {
+    color: $secondary4;
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
+    font-size: 3rem;
+    display: inline-block;
+    transition: all .2s;
+    line-height: 1;
+    text-align: right;
+    background-color: transparent;
+    border: none;
+    //cursor: pointer;
+    
+      // &:link,
+      // &:visited {
+      //     color: $secondary4;
+      //     position: absolute;
+      //     top: 2.5rem;
+      //     right: 2.5rem;
+      //     font-size: 3rem;
+      //     text-decoration: none;
+      //     display: inline-block;
+      //     transition: all .2s;
+      //     line-height: 1;
+      //     text-align: right;
+      // }
+
+      // &:hover {
+      //     color: $primary;
+      // }
+  }
+}

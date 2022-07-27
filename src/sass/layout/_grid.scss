@@ -1,0 +1,68 @@
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+
+  // &:not(:last-child) {
+  //     margin-bottom: $gutter-vertical;
+      // @include respond(tab-port) {
+      //   margin-bottom: $gutter-vertical-small;
+      // }
+  // }
+  
+  @include clearfix;
+
+  [class^="col-"] {
+      float: left;
+
+      &:not(:last-child) {
+        margin-right: $gutter-horizontal / 2;
+
+        @include respond(phone) {
+          margin-right: 0;
+          margin-bottom: $gutter-vertical-small;
+        }
+
+        // @include respond(tab-port) {
+        //   margin-right: 1rem;
+        // }
+      }
+
+      &:not(:first-child) {
+        margin-left: $gutter-horizontal / 2;
+
+        @include respond(phone) {
+          margin-left: 0;
+          margin-bottom: $gutter-vertical-small;
+        }
+
+        // @include respond(tab-port) {
+        //   margin-left: 1rem;
+        // }
+    }
+
+    @include respond(phone) {
+      width: 100% !important;
+    }
+  }
+
+  @include respond(phone) {
+    max-width: 50rem;
+    //padding: 0 3rem;
+  }
+
+  .col-1-of-2 {
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+  }
+
+  .col-1-of-3 {
+    width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+
+    // @include respond(tab-port) {
+    //   width: calc((100% - 4rem) / 3);
+    // }
+  }
+
+  .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+  }
+}

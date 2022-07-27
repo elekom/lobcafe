@@ -1,0 +1,46 @@
+.navigation {
+  border: none;
+
+  //ICON
+  &__icon {
+    position: relative;
+    margin-top: 2rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 2.5rem;
+      height: 2px;
+      background-color: $white;
+      display: inline-block;
+    }
+    
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s;
+    }
+    
+    &::before {
+      top: -.8rem;
+    }
+    
+    &::after {
+      top: .8rem;
+    }
+  }
+
+  &__top{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 2000;
+
+    // @include respond(phone) {
+    //   bottom: 2rem;
+    //   right: 2rem;
+    // }
+  }
+}
