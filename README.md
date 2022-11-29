@@ -1,4 +1,9 @@
 # lobcafe
+
+https://lobcafe.web.app
+
+Created this simple React page for a mock restaurant to learn Sass.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
